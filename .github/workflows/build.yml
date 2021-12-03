@@ -1,0 +1,21 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Strip
+        uses: Tarmil/strip-markdown-html@v0.1
+        with:
+          input-path: in.md
+          output-path: output/out.md
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: output
+          path: output
