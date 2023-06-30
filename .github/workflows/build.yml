@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Strip
-        uses: tarmil/strip-markdown-html@24bdc913140909d1b9fbcde37350a2b5e6542ff7
+        uses: tarmil/strip-markdown-html@881e84f29d410e74e2b865f3f26ef58366f778ac
         with:
           input-path: in.md
           output-path: output/out.md
